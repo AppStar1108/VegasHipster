@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController restorationIdentifier="myTabBarController" storyboardIdentifier="myTabBarController" id="4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sag-Gh-Oq3"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sYt-Cb-3sW" kind="relationship" relationship="viewControllers" id="cef-fZ-him"/>
+                        <segue destination="ge7-L5-klu" kind="relationship" relationship="viewControllers" id="Pgo-lY-fJS"/>
+                        <segue destination="wMa-46-jEO" kind="relationship" relationship="viewControllers" id="gmm-2J-zZf"/>
+                        <segue destination="4Eb-jL-Rk2" kind="relationship" relationship="viewControllers" id="hJd-dt-TC3"/>
+                        <segue destination="IPe-Og-p1s" kind="relationship" relationship="viewControllers" id="NZR-Oy-O5X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-941" y="180"/>
+        </scene>
+        <!--Navigation Controller - Hotels-->
+        <scene sceneID="qiO-4I-OGo">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="sYt-Cb-3sW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hotels" image="iconHotels.png" id="9lT-zl-c6n"/>
+                    <navigationItem key="navigationItem" id="eGz-58-mRJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rrc-HW-sCj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="taY-Da-J6W" kind="relationship" relationship="rootViewController" id="6aY-a0-Yrq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDv-Si-enK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="-1198"/>
+        </scene>
+        <!--Hotels List View Controller - Hotels-->
+        <scene sceneID="i2p-6X-XJb">
+            <objects>
+                <viewController id="taY-Da-J6W" customClass="VH_HotelsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qs5-gK-7Wr">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hotels" id="gmH-zG-6jh"/>
+                    <connections>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="wab-L3-qIa"/>
+                        <segue destination="EC7-TG-W1X" kind="push" identifier="pushUpdateViewController" id="E5T-Jm-n2o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sG-We-fzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="-1198"/>
+        </scene>
+        <!--Navigation Controller - Dining-->
+        <scene sceneID="4V6-2s-mgT">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ge7-L5-klu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dining" image="iconDining.png" id="J73-8p-hcc"/>
+                    <navigationItem key="navigationItem" id="MMC-Db-HjO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z3F-2e-mXS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W04-sf-ptj" kind="relationship" relationship="rootViewController" id="kbm-ij-c3r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fC-UY-CYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="-512"/>
+        </scene>
+        <!--Restaurants List View Controller - Dining-->
+        <scene sceneID="sPa-wA-7H7">
+            <objects>
+                <viewController id="W04-sf-ptj" customClass="VH_RestaurantsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sRF-45-NE9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dining" id="Va6-cM-IOs"/>
+                    <connections>
+                        <segue destination="uV1-Rc-Cl2" kind="push" identifier="RestaurantSubListPushSegue" id="e0z-F0-A7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwi-Vd-Twr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="-512"/>
+        </scene>
+        <!--Navigation Controller - Shows-->
+        <scene sceneID="yMP-vV-rbg">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="wMa-46-jEO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shows" image="iconShows.png" id="IU7-Kr-RuZ"/>
+                    <navigationItem key="navigationItem" id="UF0-H2-KUM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uhw-IL-Lpu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="O8Q-IY-03i" kind="relationship" relationship="rootViewController" id="VJ7-Ym-BSU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szo-WY-Vci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="180"/>
+        </scene>
+        <!--Shows List View Controller - Shows-->
+        <scene sceneID="UCO-gV-TuW">
+            <objects>
+                <viewController id="O8Q-IY-03i" customClass="VH_ShowsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ONl-T3-6ao">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shows" id="nmn-2D-afv"/>
+                    <connections>
+                        <segue destination="3yJ-Ky-QrW" kind="push" identifier="ShowsSubListPushSegue" id="O3n-nx-eEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ao7-DV-N9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="180"/>
+        </scene>
+        <!--Navigation Controller - Clubs-->
+        <scene sceneID="42o-Na-afG">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="4Eb-jL-Rk2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Clubs" image="iconClubs.png" id="PlZ-6z-tT6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nad-Gv-gkd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="o0n-id-zry" kind="relationship" relationship="rootViewController" id="0e5-LR-Moj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdS-Mc-Xdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="875"/>
+        </scene>
+        <!--Clubs List View Controller - Clubs-->
+        <scene sceneID="HAJ-jP-HDb">
+            <objects>
+                <viewController id="o0n-id-zry" customClass="VH_ClubsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AfS-8d-6zy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clubs" id="oSZ-Ez-3JT"/>
+                    <connections>
+                        <segue destination="Fmt-vR-6yh" kind="push" identifier="ClubsSubListPushSegue" id="OF4-Ms-5Yg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwy-0l-rkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="875"/>
+        </scene>
+        <!--Navigation Controller - More-->
+        <scene sceneID="EOd-hB-Xx2">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="IPe-Og-p1s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="iconMore.png" id="NDG-go-xwB"/>
+                    <navigationItem key="navigationItem" id="Jqc-ts-4Vw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CJZ-d5-5Ej">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Shq-VA-WVu" kind="relationship" relationship="rootViewController" id="zVA-K1-uVh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JT3-oe-6nN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="1567"/>
+        </scene>
+        <!--More List View Controller - More-->
+        <scene sceneID="UOc-TR-p1J">
+            <objects>
+                <viewController id="Shq-VA-WVu" customClass="VH_MoreListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbd-ob-rl3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="More" id="UBT-pe-zKe"/>
+                    <connections>
+                        <segue destination="OpU-wq-ZXU" kind="push" identifier="pushAttractionsViewController" id="uvf-fM-cwC"/>
+                        <segue destination="ZXx-p9-YiV" kind="push" identifier="pushSportsViewController" id="33K-Ja-arn"/>
+                        <segue destination="iGT-lT-Q5Y" kind="push" identifier="pushTaxiViewController" id="YRV-EW-fp9"/>
+                        <segue destination="jU6-ga-PDe" kind="push" identifier="pushBlogViewController" id="ibX-iI-N9F"/>
+                        <segue destination="bwd-gH-zZG" kind="push" identifier="pushAboutViewController" id="1UB-e8-6fb"/>
+                        <segue destination="OtO-NF-RlW" kind="push" identifier="pushContactViewController" id="2Zg-Qv-nMr"/>
+                        <segue destination="EC7-TG-W1X" kind="push" identifier="pushUpdateViewController" id="X0U-Ap-a1j"/>
+                        <segue destination="0Ro-it-Xon" kind="push" identifier="pushFriendViewController" id="dL1-ZK-Jo5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FST-IH-mD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="1567"/>
+        </scene>
+        <!--Hotels Details View Controller-->
+        <scene sceneID="CLz-ZO-wTF">
+            <objects>
+                <viewController id="Cqo-bR-ZKI" customClass="VH_HotelsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5jx-UL-zCJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5tF-XJ-0S6"/>
+                    <connections>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="tXX-7Z-cyF"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="lwd-Xq-3dq"/>
+                        <segue destination="qjt-Rw-BBU" kind="push" identifier="RestaurantDetailsPushSegue" id="SO0-gX-Npw"/>
+                        <segue destination="9cz-zR-DZi" kind="push" identifier="ShowsDetailsPushSegue" id="hMU-8c-Pkh"/>
+                        <segue destination="kpX-xF-leA" kind="push" identifier="ClubsDetailsPushSegue" id="RlQ-dP-ks8"/>
+                        <segue destination="PUa-qU-Nmb" kind="push" identifier="SportsDetailsPushSegue" id="Tku-3C-fKb"/>
+                        <segue destination="1xK-gk-pYK" kind="push" identifier="AttractionsDetailsPushSegue" id="hDs-7A-S4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nq-Ip-z0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-1198"/>
+        </scene>
+        <!--Map View Controller - Map & Location Info-->
+        <scene sceneID="ofD-9H-EyI">
+            <objects>
+                <viewController id="0Hl-3k-dkL" customClass="VH_MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cm1-Jb-KOV">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map &amp; Location Info" id="ybh-Nr-uee"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="olW-8M-u0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4724" y="-562"/>
+        </scene>
+        <!--Restaurants Sub List View Controller-->
+        <scene sceneID="p9S-G3-XLs">
+            <objects>
+                <viewController id="uV1-Rc-Cl2" customClass="VH_RestaurantsSubListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ed9-Ks-L7t">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Twt-r2-SPG"/>
+                    <connections>
+                        <segue destination="qjt-Rw-BBU" kind="push" identifier="RestaurantDetailsPushSegue" id="YSG-qZ-p9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nae-Vf-30P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-512"/>
+        </scene>
+        <!--Gallery View Controller - Gallery-->
+        <scene sceneID="Wv2-oi-Ppo">
+            <objects>
+                <viewController id="fHb-E3-AII" customClass="VH_GalleryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pXZ-9c-5vr">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gallery" id="Uve-Gb-kaU"/>
+                    <connections>
+                        <segue destination="OCN-pL-4Sa" kind="push" identifier="GalleryImagePushSegue" id="wKJ-MW-i8w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXa-Lz-Kaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5250" y="174"/>
+        </scene>
+        <!--Picture View Controller - Gallery-->
+        <scene sceneID="DZg-lN-dKV">
+            <objects>
+                <viewController id="OCN-pL-4Sa" customClass="VH_PictureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQf-GE-YyQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gallery" id="ap7-Ek-bte"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m03-W9-ZWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5717" y="174"/>
+        </scene>
+        <!--Restaurant Details View Controller-->
+        <scene sceneID="Ry4-GC-gep">
+            <objects>
+                <viewController id="qjt-Rw-BBU" customClass="VH_RestaurantDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="obb-tM-Hox">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Owi-fB-S1E"/>
+                    <connections>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="AMD-LT-sks"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="h7t-pa-7hN"/>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="28m-nW-Sf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mS-Ap-bTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="-512"/>
+        </scene>
+        <!--Shows Sub List View Controller-->
+        <scene sceneID="4fE-of-rJ1">
+            <objects>
+                <viewController id="3yJ-Ky-QrW" customClass="VH_ShowsSubListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CXO-if-BGe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bU0-ia-gzl"/>
+                    <connections>
+                        <segue destination="9cz-zR-DZi" kind="push" identifier="ShowsDetailsPushSegue" id="Ikd-P8-73b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYR-oS-1Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="180"/>
+        </scene>
+        <!--Shows Details View Controller-->
+        <scene sceneID="yWi-qY-q22">
+            <objects>
+                <viewController id="9cz-zR-DZi" customClass="VH_ShowsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jls-Y8-f7W">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i6w-vu-pZD"/>
+                    <connections>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="kY3-qe-dlK"/>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="t0A-B5-fyD"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="hOv-qQ-J8k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZc-1R-7fs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="180"/>
+        </scene>
+        <!--Clubs Sub List View Controller-->
+        <scene sceneID="aWG-p6-ray">
+            <objects>
+                <viewController id="Fmt-vR-6yh" customClass="VH_ClubsSubListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dGH-pq-0Pm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Hm-uF-aua"/>
+                    <connections>
+                        <segue destination="kpX-xF-leA" kind="push" identifier="ClubsDetailsPushSegue" id="US5-AX-23h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04D-kO-M2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="875"/>
+        </scene>
+        <!--Clubs Details View Controller-->
+        <scene sceneID="FjT-jz-bBM">
+            <objects>
+                <viewController id="kpX-xF-leA" customClass="VH_ClubsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HmH-YH-gqm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1eN-lc-cUH"/>
+                    <connections>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="B8p-Oj-uNF"/>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="ikr-zT-Hpz"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="8N8-KX-xoW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wmx-Mf-OVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="875"/>
+        </scene>
+        <!--Attractions List View Controller - Attractions-->
+        <scene sceneID="gIk-0f-bgF">
+            <objects>
+                <viewController id="OpU-wq-ZXU" customClass="VH_AttractionsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcx-BI-QzB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Attractions" id="voB-i9-SHt"/>
+                    <connections>
+                        <segue destination="1xK-gk-pYK" kind="push" identifier="AttractionsDetailsPushSegue" id="zlp-cO-FlF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCW-S4-rFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="1575"/>
+        </scene>
+        <!--Attractions Details View Controller-->
+        <scene sceneID="KSU-mj-QC6">
+            <objects>
+                <viewController id="1xK-gk-pYK" customClass="VH_AttractionsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4I-cn-K9D">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ymF-15-A7v"/>
+                    <connections>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="24s-QL-uPV"/>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="Qk9-Qz-YIv"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="wZS-Mc-O13"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAE-5X-UjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2804" y="1575"/>
+        </scene>
+        <!--Sports List View Controller - Sports-->
+        <scene sceneID="KMR-9x-brk">
+            <objects>
+                <viewController id="ZXx-p9-YiV" customClass="VH_SportsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="30d-V9-ZlK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sports" id="0xw-aG-b2V"/>
+                    <connections>
+                        <segue destination="4AU-ZD-MfU" kind="push" identifier="SportsSubListPushSegue" id="BLa-Q6-2sp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEY-6e-epo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="2307"/>
+        </scene>
+        <!--Sports Sub List View Controller-->
+        <scene sceneID="fEL-OQ-4pz">
+            <objects>
+                <viewController id="4AU-ZD-MfU" customClass="VH_SportsSubListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odD-cN-gp0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6gy-BB-Gar"/>
+                    <connections>
+                        <segue destination="PUa-qU-Nmb" kind="push" identifier="SportsDetailsPushSegue" id="S5s-gj-4yr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f00-IV-VTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2288" y="2307"/>
+        </scene>
+        <!--Sports Details View Controller-->
+        <scene sceneID="tRq-6c-blz">
+            <objects>
+                <viewController id="PUa-qU-Nmb" customClass="VH_SportsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOg-Wm-ssE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RsN-AH-oHl"/>
+                    <connections>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="AbZ-Pf-5Qk"/>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="kxW-I3-ZTv"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="CGl-1z-YDR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTW-uB-cWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2810" y="2307"/>
+        </scene>
+        <!--Taxis List View Controller - Taxi Cabs-->
+        <scene sceneID="2cM-FF-JCJ">
+            <objects>
+                <viewController id="iGT-lT-Q5Y" customClass="VH_TaxisListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Tq-i3-baq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Taxi Cabs" id="a4u-5o-aYA"/>
+                    <connections>
+                        <segue destination="Kcu-l2-BUU" kind="push" identifier="TaxisDetailsPushSegue" id="7mG-kJ-12l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcZ-Bj-Twc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2296" y="3023"/>
+        </scene>
+        <!--Taxis Details View Controller-->
+        <scene sceneID="c0P-IS-qFB">
+            <objects>
+                <viewController id="Kcu-l2-BUU" customClass="VH_TaxisDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cs6-HJ-IV8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jvz-AN-4UA"/>
+                    <connections>
+                        <segue destination="0Hl-3k-dkL" kind="push" identifier="pushMapView" id="4aH-r6-wkG"/>
+                        <segue destination="fHb-E3-AII" kind="push" identifier="GalleryPushSegue" id="FNa-WJ-uYI"/>
+                        <segue destination="Cqo-bR-ZKI" kind="push" identifier="HotelsDetailsViewSegue" id="aVr-fz-6U4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77Z-Pz-DUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="3023"/>
+        </scene>
+        <!--Blog List View Controller - Blog-->
+        <scene sceneID="CeU-8x-Avj">
+            <objects>
+                <viewController id="jU6-ga-PDe" customClass="VH_BlogListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gcv-Sg-bjb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog" id="8Qr-5Y-u8o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKf-S7-Ixk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="3763"/>
+        </scene>
+        <!--About List View Controller - About Us / FAQ-->
+        <scene sceneID="GBu-mn-jPB">
+            <objects>
+                <viewController id="bwd-gH-zZG" customClass="VH_AboutListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vcA-jg-y6p">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us / FAQ" id="MYo-fw-6vr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABf-fQ-gLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="5199"/>
+        </scene>
+        <!--Contact List View Controller - Contact Us-->
+        <scene sceneID="MKA-CP-hqI">
+            <objects>
+                <viewController id="OtO-NF-RlW" customClass="VH_ContactListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zq8-Vf-TrG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact Us" id="t6L-Ao-iin"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akM-QI-ZjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="4483"/>
+        </scene>
+        <!--Update View Controller - Update-->
+        <scene sceneID="Zu9-75-bqq">
+            <objects>
+                <viewController id="EC7-TG-W1X" customClass="VH_UpdateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UrT-E4-hFI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Download the latest info from us." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0l-ye-mRT">
+                                <rect key="frame" x="20" y="25" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="center" hidesWhenStopped="YES" style="whiteLarge" id="VmQ-GQ-2Ql">
+                                <rect key="frame" x="142" y="101" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.39000000000000001" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hAc-fE-Wec">
+                                <rect key="frame" x="89" y="183" width="143" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DpJ-fN-TXz">
+                                <rect key="frame" x="20" y="244" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2dv-BD-LKy">
+                                <rect key="frame" x="20" y="313" width="280" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Update" id="HKq-qI-pTB"/>
+                    <connections>
+                        <outlet property="activity" destination="VmQ-GQ-2Ql" id="ueY-W7-M50"/>
+                        <outlet property="status_text" destination="DpJ-fN-TXz" id="29b-at-xQO"/>
+                        <outlet property="updateButton" destination="hAc-fE-Wec" id="iXH-FC-Za9"/>
+                        <outlet property="update_text" destination="2dv-BD-LKy" id="RRR-42-lgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63Y-Ib-lGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="5931"/>
+        </scene>
+        <!--Friend List View Controller - Friend Finder-->
+        <scene sceneID="2Ux-ZY-NZA">
+            <objects>
+                <viewController id="0Ro-it-Xon" customClass="VH_FriendListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="msE-O9-Vxj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Finder" id="3r7-ND-haJ"/>
+                    <connections>
+                        <segue destination="cx8-G6-eAi" kind="push" identifier="pushCreateGroupView" id="doQ-Yd-IDN"/>
+                        <segue destination="E8U-Vr-Qlk" kind="push" identifier="pushJoinGroupView" id="l0R-Rq-k4e"/>
+                        <segue destination="SmF-uh-tfu" kind="push" identifier="pushFriendSettingsView" id="0LW-5j-ay6"/>
+                        <segue destination="HRI-xu-7V3" kind="push" identifier="pushFriendGroupView" id="Yli-mn-ki8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7i0-vZ-Ju7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="6651"/>
+        </scene>
+        <!--Friend Create View Controller - Friend Finder-->
+        <scene sceneID="13b-Ue-m6a">
+            <objects>
+                <viewController id="cx8-G6-eAi" customClass="VH_FriendCreateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VPX-wB-Y2f">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Finder" id="T17-9R-u4c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2y-Iu-rqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="6651"/>
+        </scene>
+        <!--Friend Join View Controller - Friend Finder-->
+        <scene sceneID="bWp-Ad-TNk">
+            <objects>
+                <viewController id="E8U-Vr-Qlk" customClass="VH_FriendJoinViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lmb-xy-MLQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Finder" id="jPY-vv-vVL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePB-gH-UVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="7337"/>
+        </scene>
+        <!--Friend Settings View Controller - Friend Finder-->
+        <scene sceneID="aB7-cg-0ES">
+            <objects>
+                <viewController id="SmF-uh-tfu" customClass="VH_FriendSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQV-kT-hB7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Finder" id="pPU-YX-Jxt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7W-as-ufd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="8027"/>
+        </scene>
+        <!--Group View Controller - Friend Finder-->
+        <scene sceneID="cmR-pQ-BgS">
+            <objects>
+                <viewController id="HRI-xu-7V3" customClass="VH_GroupViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SA3-Ka-LPh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Finder" id="iLa-C1-z2D"/>
+                    <connections>
+                        <segue destination="tK9-yi-uDp" kind="push" identifier="pushMapView" id="SjV-iL-Cz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5S-m8-QJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="8727"/>
+        </scene>
+        <!--Map View Controller - Map & Location Info-->
+        <scene sceneID="KfE-fB-dtH">
+            <objects>
+                <viewController id="tK9-yi-uDp" customClass="VH_FFMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CIc-42-SBe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map &amp; Location Info" id="tKi-sR-rSU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNG-Lo-zbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5180" y="-570"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconClubs.png" width="32" height="32"/>
+        <image name="iconDining.png" width="32" height="32"/>
+        <image name="iconHotels.png" width="32" height="32"/>
+        <image name="iconMore.png" width="32" height="32"/>
+        <image name="iconShows.png" width="32" height="32"/>
+    </resources>
+    <classes>
+        <class className="VH_AboutListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_AboutListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_AttractionsDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_AttractionsDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_AttractionsListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_AttractionsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_BlogListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_BlogListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="blogButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_ClubsDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ClubsDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_ClubsListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ClubsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_ClubsSubListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ClubsSubListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_ContactListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ContactListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="emailLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="emailTxt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="msgLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="msgTxt" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sendBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="subjectLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="subjectTxt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_FFMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_FFMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="VH_FriendCreateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_FriendCreateViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="group_name_lbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="group_name_txt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTxt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phoneLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneTxt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sendBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_FriendJoinViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_FriendJoinViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="group_pin_lbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="group_pin_txt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTxt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phoneLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneTxt" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sendBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_FriendListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_FriendListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="createBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="joinBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="messageLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="titleLbl" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_GalleryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_GalleryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="loading_view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="page_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_GroupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_GroupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="emailpinBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="leaveBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="messageLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="msgBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pinLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="titleLbl" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VH_HotelsDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_HotelsDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_HotelsListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_HotelsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="VH_MoreListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_MoreListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_PictureViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_PictureViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="caption_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="VH_RestaurantDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_RestaurantDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_RestaurantsListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_RestaurantsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_RestaurantsSubListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_RestaurantsSubListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_ShowsDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ShowsDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_ShowsListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ShowsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_ShowsSubListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_ShowsSubListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_SportsDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_SportsDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_SportsListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_SportsListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_SportsSubListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_SportsSubListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_TaxisDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_TaxisDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="VH_TaxisListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_TaxisListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tblView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="VH_UpdateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VH_UpdateViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activity" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="status_text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="updateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="update_text" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="E5T-Jm-n2o"/>
+        <segue reference="24s-QL-uPV"/>
+        <segue reference="hDs-7A-S4r"/>
+        <segue reference="lwd-Xq-3dq"/>
+        <segue reference="SO0-gX-Npw"/>
+        <segue reference="tXX-7Z-cyF"/>
+        <segue reference="RlQ-dP-ks8"/>
+        <segue reference="Tku-3C-fKb"/>
+        <segue reference="hMU-8c-Pkh"/>
+    </inferredMetricsTieBreakers>
+</document>
